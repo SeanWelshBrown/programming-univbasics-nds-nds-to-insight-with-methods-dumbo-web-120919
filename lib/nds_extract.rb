@@ -9,7 +9,6 @@ def directors_totals(nds)
   while row_index < nds.count do
     
     name = nds[row_index][:name]
-    movie_totals = 0
     movie_totals += gross_for_director(nds[row_index])
     result[name] = movie_totals
     row_index += 1
