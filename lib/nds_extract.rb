@@ -15,7 +15,7 @@ def directors_totals(nds)
     inner_index = 0
     while inner_index < inner_length do
       
-      movie_totals += gross_for_director(nds[inner_index])
+      movie_totals += gross_for_director(nds[row_index])
       inner_index += 1
       
     end
