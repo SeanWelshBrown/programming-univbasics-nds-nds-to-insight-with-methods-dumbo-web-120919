@@ -10,16 +10,7 @@ def directors_totals(nds)
     
     name = nds[row_index][:name]
     movie_totals = 0
-    
-    inner_length = nds[row_index][:movies].length
-    inner_index = 0
-    while inner_index < inner_length do
-      
-      movie_totals += gross_for_director(nds[row_index])
-      inner_index += 1
-      
-    end
-    
+    movie_totals += gross_for_director(nds[row_index])
     result[name] = movie_totals
     row_index += 1
     
