@@ -1,4 +1,5 @@
 require 'directors_database'
+require 'pp'
 
 def directors_totals(nds)
     
