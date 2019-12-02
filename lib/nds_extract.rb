@@ -39,6 +39,4 @@ def gross_for_director(director_data)
     index += 1 
   end
   
-  total_for_director
-  
 end
