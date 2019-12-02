@@ -1,16 +1,35 @@
 require 'directors_database'
 
-# Write a method that, given an NDS creates a new Hash
-# The return value should be like:
-#
-# { directorOne => allTheMoneyTheyMade, ... }
-
 def directors_totals(nds)
+    
   result = {}
-  nil
+  
+  row_index = 0 
+  while row_index < nds.count do
+    
+    name = nds[row_index][:name]
+    movie_totals = 0
+    
+    inner_length = nds[row_index][:movies].length
+    inner_index = 0
+    while inner_index < inner_length do
+      
+      movie_totals += nds[row_index][:movies][inner_index][:worldwide_gross]
+      inner_index += 1
+      
+    end
+    
+    result[name] = movie_totals
+    row_index += 1
+    
+  end
+  
+ pp result
 end
 
-# Find a way to accumulate the :worldwide_grosses and return that Integer
-# using director_data as input
+
 def gross_for_director(director_data)
+  
+  
+  
 end
