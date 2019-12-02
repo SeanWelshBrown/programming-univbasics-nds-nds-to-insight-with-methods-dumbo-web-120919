@@ -14,7 +14,7 @@ def directors_totals(nds)
     inner_index = 0
     while inner_index < inner_length do
       
-      movie_totals += nds[row_index][:movies][inner_index][:worldwide_gross]
+      movie_totals += gross_for_director(nds[inner_index])
       inner_index += 1
       
     end
